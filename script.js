@@ -9,6 +9,8 @@ const bgc = document.querySelector('.range-block .bgc')
 const block = document.querySelector('.block')
 const textarea = document.querySelector('textarea')
 const border = document.getElementById('border')
+const width = document.querySelector('.wd')
+const height = document.querySelector('.ht')
 
 
 // Universal Function
@@ -23,6 +25,7 @@ function setBorderRadius() {
     block.style.border = `${bw.value}px solid ${bc.value}`
     block.style.background = `${bgc.value}`
     block.style.borderRadius = `${tl.value}px ${tr.value}px ${br.value}px ${bl.value}px`
+    block.style.width = `${width.value}px`
 
     radiusText()
 }
@@ -38,6 +41,8 @@ all.addEventListener('input', function () {
 
     radiusText()
 })
+
+width.addEventListener('input', setBorderRadius)
 
 tl.addEventListener('input', setBorderRadius, radiusText())
 

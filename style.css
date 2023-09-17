@@ -44,6 +44,7 @@ input{
     align-items: center;
     background: #999;
     border: 0px #000;
+    margin-top: -80px;
 }
 
 textarea{
@@ -54,6 +55,10 @@ textarea{
     background: rgba(255, 255, 255, 0.3);
     opacity: 1;
     border: none;
+}
+
+.range-block {
+    margin-top: -80px;
 }
 
 .range-block select {
