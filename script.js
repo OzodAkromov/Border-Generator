@@ -13,6 +13,7 @@ const width = document.querySelector('.wd')
 const height = document.querySelector('.ht')
 const trX = document.querySelector('.trX')
 const trY = document.querySelector('.trY')
+const rt = document.querySelector('.rt')
 
 
 // Universal Function
@@ -28,7 +29,13 @@ function setBorderRadius() {
     block.style.background = `${bgc.value}`
     block.style.borderRadius = `${tl.value}px ${tr.value}px ${br.value}px ${bl.value}px`
     block.style.width = `${width.value}px`
-    block.style.transform = `translateX(${trX.value}%)`+`translateY(${trY.value}%)` 
+    block.style.transform = `translateX(${trX.value}%)`+`translateY(${trY.value}%)`+ `rotate(${rt.value}deg)` 
+
+    radiusText()
+}
+
+function transform() {
+    block.style.transform = `translateX(${trX.value}%)`+`translateY(${trY.value}%)`+ `rotate(${rt.value}deg)` 
 
     radiusText()
 }
@@ -45,8 +52,10 @@ all.addEventListener('input', function () {
     radiusText()
 })
 
-trX.addEventListener('input', setBorderRadius)
-trY.addEventListener('input', setBorderRadius)
+rt.addEventListener('input', transform)
+
+trX.addEventListener('input', transform)
+trY.addEventListener('input', transform)
 
 width.addEventListener('input', setBorderRadius)
 
