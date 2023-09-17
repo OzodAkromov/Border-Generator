@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #ffffff;
 }
 
 .container{
@@ -20,7 +21,7 @@ body{
 
 .range-block{
     padding: 20px;
-    background: #999;
+    background: #16C7CA;
 }
 
 p{
@@ -42,9 +43,10 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #999;
+    background: #16C7CA;
     border: 0px #000;
     margin-top: -80px;
+    margin-right: 300px;
 }
 
 textarea{
@@ -52,13 +54,13 @@ textarea{
     height: 50%;
     resize: none;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.3);
     opacity: 1;
     border: none;
 }
 
 .range-block {
     margin-top: -80px;
+    margin-left: -80px;
 }
 
 .range-block select {
@@ -68,7 +70,7 @@ textarea{
     text-transform: uppercase;
     width: 200px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 8px;
     border: 1px solid blue;
     outline: none;
 }
