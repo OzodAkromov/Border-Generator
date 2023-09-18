@@ -10,10 +10,10 @@ const block = document.querySelector('.block')
 const textarea = document.querySelector('textarea')
 const border = document.getElementById('border')
 const width = document.querySelector('.wd')
-const height = document.querySelector('.ht')
 const trX = document.querySelector('.trX')
 const trY = document.querySelector('.trY')
 const rt = document.querySelector('.rt')
+const height = document.querySelector('.height')
 
 
 // Universal Function
@@ -29,7 +29,7 @@ function setBorderRadius() {
     block.style.background = `${bgc.value}`
     block.style.borderRadius = `${tl.value}px ${tr.value}px ${br.value}px ${bl.value}px`
     block.style.width = `${width.value}px`
-    block.style.transform = `translateX(${trX.value}%)`+`translateY(${trY.value}%)`+ `rotate(${rt.value}deg)` 
+    block.style.height = `${height.value}px`
 
     radiusText()
 }
@@ -51,6 +51,8 @@ all.addEventListener('input', function () {
 
     radiusText()
 })
+
+height.addEventListener('input', setBorderRadius)
 
 rt.addEventListener('input', transform)
 
